@@ -1,0 +1,7 @@
+node_modules/
+.pnpm-store/
+dist/
+crates/tuner/pkg/
+crates/tuner/target/
+*.local
+.DS_Store

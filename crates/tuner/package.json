@@ -1,0 +1,19 @@
+{
+  "name": "@violin-tuner/dsp",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./pkg/violin_tuner_dsp.d.ts",
+      "import": "./pkg/violin_tuner_dsp.js"
+    }
+  },
+  "scripts": {
+    "build": "wasm-pack build --target web --out-dir pkg --release",
+    "fmt:check": "cargo fmt --check",
+    "clippy": "cargo clippy --all-targets -- -D warnings",
+    "test": "cargo test",
+    "fmt": "cargo fmt"
+  }
+}
