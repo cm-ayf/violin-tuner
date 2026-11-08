@@ -6,10 +6,6 @@ A=442 Hz を基準に純正五度で合わせる、端末内処理のバイオ�
 
 ## 開発
 
-Rustup と `wasm-pack` が必要です。Rust のツールチェーン・コンポーネント・WASM ターゲットは [rust-toolchain.toml](rust-toolchain.toml)、workspace とリリース設定はルートの [Cargo.toml](Cargo.toml) に定義しています。Node.js / pnpm の要件は `devEngines` に定義しています。
-
-`wasm-pack` を Cargo でインストールした場合は、`$HOME/.cargo/bin` を PATH に含めてください。
-
 ```sh
 rustup toolchain install --no-self-update
 cargo install wasm-pack --locked
@@ -18,10 +14,6 @@ vp dev
 ```
 
 ローカル URL は `http://localhost:5173/violin-tuner/`。マイクを使うため、本番は HTTPS、ローカルは localhost で開いてください。
-
-Cargo の lockfile とビルドキャッシュはルートの `Cargo.lock` と `target/` に集約しています。アプリに公開する WASM の生成先は引き続き `crates/tuner/pkg/` です。CI も同じ Rust 宣言を読み込みます。
-
-`workbox-window` は PWA の更新通知用の仮想モジュールから読み込まれるため、アプリの直接依存として宣言しています。pnpm の間接依存の配置に頼らず、再インストール後も解決できるようにするためです。
 
 ```sh
 vp run fmt      # フォーマット
