@@ -65,5 +65,5 @@ export default defineConfig({
     options: { typeAware: false, typeCheck: false },
     ignorePatterns: ["crates/tuner/pkg/**", "dist/**"],
   },
-  fmt: { ignorePatterns: ["crates/tuner/pkg/**", "dist/**", "crates/tuner/target/**"] },
+  fmt: { ignorePatterns: ["crates/tuner/pkg/**", "dist/**", "target/**"] },
 });

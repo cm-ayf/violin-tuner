@@ -1,0 +1,8 @@
+[workspace]
+members = ["crates/tuner"]
+resolver = "3"
+
+[profile.release]
+lto = true
+opt-level = 3
+codegen-units = 1
