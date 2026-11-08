@@ -36,7 +36,7 @@ jobs:
       - name: Build PWA
         run: vp run build
       - name: Upload Pages artifact
-        uses: actions/upload-pages-artifact@v3.0.1
+        uses: actions/upload-pages-artifact@v5.0.0
         if: github.ref == 'refs/heads/main'
         with:
           path: dist
