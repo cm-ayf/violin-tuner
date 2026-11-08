@@ -64,6 +64,8 @@ vp run dev
 
 `wasm-pack` が未導入の場合は `cargo install wasm-pack --locked` で導入する。Cargo からインストールした実行ファイルを使う場合は `$HOME/.cargo/bin` が `PATH` に含まれていることを確認する。
 
+CI では各ワークフローの `WASM_PACK_VERSION` で固定した wasm-pack を `cargo install` する。GitHub Releases のバイナリを取得する Action には戻さない。既存の Rust cache で Cargo の bin とインストール情報を保存し、check / deploy で同じバージョンのキャッシュを共有する。復元後も `cargo install` は実行し、同じバージョンが導入済みなら Cargo が再コンパイルを省略する。バージョン変更時は両ワークフローを合わせて変更する。
+
 ### 通常の作業
 
 - `vp run dev`：WASM を生成してから開発サーバーを起動。

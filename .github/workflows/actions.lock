@@ -6,7 +6,6 @@ workflows:
     '.github/workflows/check.yaml':
         - 'actions/checkout@v4.4.0'
         - 'jdx/jactionlint@v2.5.0'
-        - 'jetli/wasm-pack-action@v0.4.0'
         - 'swatinem/rust-cache@v2.9.3'
         - 'voidzero-dev/setup-vp@v1.22.0'
     '.github/workflows/deploy.yaml':
@@ -14,8 +13,6 @@ workflows:
         - 'actions/configure-pages@v5.0.0'
         - 'actions/deploy-pages@v4.0.5'
         - 'actions/upload-pages-artifact@v3.0.1'
-        - 'jdx/jactionlint@v2.5.0'
-        - 'jetli/wasm-pack-action@v0.4.0'
         - 'swatinem/rust-cache@v2.9.3'
         - 'voidzero-dev/setup-vp@v1.22.0'
 dependencies:
@@ -58,11 +55,6 @@ dependencies:
         repo_id: 1404951382
         uses:
             - 'github/codeql-action@2892aa5e19bbd11bc0cff5427e3b750a04d9e3c2'
-    'jetli/wasm-pack-action@v0.4.0':
-        ref: 'v0.4.0'
-        commit: 'sha1-0d096b08b4e5a7de8c28de67e11e945404e9eefa'
-        owner_id: 1142758
-        repo_id: 244578171
     'swatinem/rust-cache@v2.9.3':
         ref: 'v2.9.3'
         commit: 'sha1-d1527c8f67ef9af357290475d4af4b0fab8f12e0'
