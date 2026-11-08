@@ -13,7 +13,7 @@
     "workbox-window": "7.4.1"
   },
   "devDependencies": {
-    "@types/node": "^26.0.0",
+    "@types/node": "^24.0.0",
     "@vite-pwa/assets-generator": "2.0.0",
     "@vizejs/vite-plugin": "0.711.0",
     "typescript": "7.1.0-beta",
@@ -30,7 +30,7 @@
     },
     "runtime": {
       "name": "node",
-      "version": "^26",
+      "version": "^24",
       "onFail": "error"
     }
   }
