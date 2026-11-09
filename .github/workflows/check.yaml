@@ -18,7 +18,7 @@ jobs:
     env:
       WASM_PACK_VERSION: 0.13.1
     steps:
-      - uses: actions/checkout@v4.4.0
+      - uses: actions/checkout@v7.0.1
         with:
           persist-credentials: false
       - name: Lint workflows and dependency configuration
