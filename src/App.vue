@@ -107,21 +107,6 @@ onUnmounted(() => {
           </button>
         </template>
       </div>
-      <div class="string-selector" role="group" aria-label="着目する弦を選択">
-        <button
-          v-for="(string, index) in STRINGS"
-          :key="string.name"
-          :aria-pressed="selected === index"
-          :class="{ selected: selected === index }"
-          @click="selectString(index)"
-        >
-          <span class="string-name"
-            >{{ string.name }}<small>{{ string.octave }}</small></span
-          >
-          <span class="string-hz">{{ string.target.toFixed(2) }} <small>Hz</small></span>
-        </button>
-      </div>
-
       <div class="pitch-display" :class="{ 'in-tune': inTune }">
         <span class="focus-label"
           >{{ target.label }} <span>· {{ automatic ? "AUTO" : "MANUAL" }}</span></span
@@ -303,47 +288,6 @@ main {
 .controls button[aria-pressed="true"] {
   background: #dbe5cc;
   border-color: #8da376;
-}
-.string-selector {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 8px;
-  max-width: 580px;
-  margin: auto;
-}
-.string-selector button {
-  border: 1px solid transparent;
-  background: #f0f1e9;
-  color: #6c7966;
-  border-radius: 9px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 5px;
-  padding: 12px 6px;
-  transition: background 150ms;
-}
-.string-selector button.selected {
-  background: #203d31;
-  color: #f4f3df;
-  box-shadow: 0 3px 6px #203d3120;
-}
-.string-name {
-  font-family: Georgia, serif;
-  font-size: 25px;
-}
-.string-name small {
-  font-family: "Avenir Next", sans-serif;
-  font-size: 11px;
-  margin-left: 3px;
-  opacity: 0.7;
-}
-.string-hz {
-  font-size: 10px;
-  font-variant-numeric: tabular-nums;
-}
-.string-hz small {
-  opacity: 0.65;
 }
 .pitch-display {
   text-align: center;
