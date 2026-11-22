@@ -22,7 +22,7 @@ jobs:
         with:
           persist-credentials: false
       - name: Lint workflows and dependency configuration
-        uses: jdx/jactionlint@v2.5.0
+        uses: jdx/jactionlint@v2.6.0
         with:
           strict-exit: true
       - name: Set up Vite+
